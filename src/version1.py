@@ -8,11 +8,12 @@ data = img.load()
 len_x, len_y = img.size # take the size of the image
 start_time = time() # start the time
 # algorithm 1 for change the image
+
 for y in range(len_y):
     for x in range(len_x):
-        data[x,y] = (255-data[x,y][0], data[x,y][1], data[x,y][2]) # r
-        data[x,y] = (data[x,y][0], 255-data[x,y][1], data[x,y][2]) # g
-        data[x,y] = (data[x,y][0], data[x,y][1], 255-data[x,y][2]) # b
+        data[x,y] = (255-data[x,y][0], data[x,y][1], data[x,y][2])
+        data[x,y] = (data[x,y][0], 255-data[x,y][1], data[x,y][2])
+        data[x,y] = (data[x,y][0], data[x,y][1], 255-data[x,y][2])
 
 elapsed_time = time() - start_time # time finished the algorithm
 
