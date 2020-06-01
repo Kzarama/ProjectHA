@@ -9,6 +9,13 @@ len_x, len_y = img.size
 start_time = time()
 
 for x in range(len_x):
+    """
+    Los algoritmos toman el valor de y para las filas y x para las columnas.
+    Esto es porque a la hora de convertir los bits en una lista de lista (simil de matrices en python)
+    para poder recorrer correctamente como los algoritmos de los lineamos toca invertir las variables.
+    En pocas palabra en estos algoritmos y (algoritmo) es igual a x (lineamientos)
+    y X (algoritmo) es igual a y (lineamientos)
+    """
     for y in range(len_y):
         image[x,y] = (255-image[x,y][0], image[x,y][1], image[x,y][2])
         image[x,y] = (image[x,y][0], 255-image[x,y][1], image[x,y][2])
